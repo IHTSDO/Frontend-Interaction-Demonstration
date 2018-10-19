@@ -2,7 +2,7 @@ $(document).ready(function(){
     //Id Search function using jQuery ajax, bound to appropriate button by ID
     $('#sumbitIdSearch').click(function() {
         $.ajax({
-            url: 'terminologyServer/concepts/search',
+            url: 'terminology-server/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
     $('#sumbitTextSearch').click(function() {
         $.ajax({
-            url: 'terminologyServer/concepts/search',
+            url: 'terminology-server/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
     $('#sumbitECLSearch').click(function() {
         $.ajax({
-            url: 'terminologyServer/concepts/search',
+            url: 'terminology-server/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
