@@ -1,31 +1,12 @@
-# Frontend-Interaction-Demonstration
-Simple application to demonstrate querying Termserver back ends. Page is html with jQuery and bootstrap. Included is an example nginx configuration file as follows:
+# SNOMED Frontend Interaction Demonstration
+A very simple application to demonstrate querying a SNOMED International Terminology Server API. 
+Page is HTML with jQuery and Bootstrap. Included is an example [Nginx configuration file](nginx.conf).
 
-```
-worker_processes  1;
-
-events {
-    worker_connections  1024;
-}
-
-http {
-    include    mime.types;
-    server {
-        listen      8087;
-        server_name localhost.ihtsdotools.org;
-
-        location / {
-            root /yourRoot/Frontend-Interaction-Demonstration/;
-        }
-        
-        location /terminologyServer {
-            proxy_pass https://dev-authoring.ihtsdotools.org/snowowl/snomed-ct/v2/MAIN/;
-        }
-    }
-    
-}
-```
-
-To setup the project simply clone this repository - update your nginx configuration with the above server block (altering the port as neccessary and the root to the folder) - and then visit local.ihtsdotools.org:portNumber.
-
-You will need to be logged into https://dev-authoring.ihtsdotools.org/#/home in order to query the Termserver. 
+## Setup
+To get this project set up on your local machine:
+- Clone this repository.
+- Install Nginx if you don't already have it.
+- Update and install the [Nginx configuration](nginx.conf).
+- Make sure you are pointing to a [Snowstorm](https://github.com/IHTSDO/snowstorm) terminology server installation either locally or on a server.
+- Visit [http://local:8087/](http://local:8087/) to see what is there.
+- Start hacking the code!
