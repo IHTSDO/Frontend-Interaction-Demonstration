@@ -1,0 +1,59 @@
+<!doctype html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/main.js"></script>
+<html>
+  <head>
+    <title>Terminology Server Example Frontend</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top bg-dark p-2 pr-2 col-md-12">
+        <a class="navLink col-md-3 float-left">
+            <img class="logo mr-2 p-0" src="/small_logo.png">
+            <span class="title">Developer Day Demonstration</span>
+        </a>
+    </nav>
+    <div class="container main col-md-12">
+        <div class="row">
+            <div class="container col-md-6 mt-5">  
+                <div id="termSearch" class="form-group">
+                    <div class="form-group">
+                        <label for="term">Find concepts by term:</label>
+                        <input type="text" class="form-control" id="term" placeholder="Concept Term">
+                    </div>
+                </div>
+                <button id="sumbitTextSearch">Search</button>
+                <pre class="results"><code id="termResult" class="results"></code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-md-6 mt-5">  
+                <div id="idSearch" class="form-group">
+                    <div class="form-group">
+                        <label for="conceptId">Find a concept by Id:</label>
+                        <input type="text" class="form-control" id="conceptId" placeholder="Concept Id">
+                    </div>
+                </div>
+                <button id="sumbitIdSearch">Search</button>
+                <pre class="results"><code id="idResult" class="results"></code></pre>
+            </div>
+            <div class="container col-md-6 mt-5 pull-right">  
+                <div id="eclSearch" class="form-group">
+                    <div class="form-group">
+                        <label for="term">Find concepts by ECL:</label>
+                        <input type="text" class="form-control" id="ecl" placeholder="ECL Expression">
+                    </div>
+                </div>
+                <button id="sumbitECLSearch">Search</button>
+                <pre class="results"><code id="eclResult" class="results"></code></pre>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-dark">
+        <a class="px-3 navLink" href="http://www.snomed.org/">Copyright 2018 SNOMED International</a>
+        <a class="px-3 navLink" href="https://confluence.ihtsdotools.org/display/SIAPUG/SNOMED+International+Authoring+Platform+User+Guide">User Guide</a>
+        <a class="px-3 navLink" href="http://www.snomed.org/contact-us/">Contact Us</a>
+    </footer>
+  </body>
+</html>
