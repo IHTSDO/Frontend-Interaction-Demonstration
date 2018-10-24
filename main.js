@@ -1,8 +1,19 @@
+// Terminology Server on same nginx
+var terminologyServerUrl = 'terminology-server';
+
+// Local Terminology Server without nginx
+//var terminologyServerUrl = 'http://localhost:8080/terminology-server';
+
+// Remote Terminology Server
+//var terminologyServerUrl = 'http://<some-ip-address>/terminology-server';
+
+var branch = "MAIN";
+
 $(document).ready(function() {
     //Id Search function using jQuery ajax, bound to appropriate button by ID
     $('#sumbitIdSearch').click(function() {
         $.ajax({
-            url: 'terminology-server/MAIN/concepts/search',
+            url: terminologyServerUrl + '/' + branch +'/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -20,7 +31,7 @@ $(document).ready(function() {
     });
     $('#sumbitTextSearch').click(function() {
         $.ajax({
-            url: 'terminology-server/MAIN/concepts/search',
+            url: terminologyServerUrl + '/' + branch + '/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
@@ -35,7 +46,7 @@ $(document).ready(function() {
     });
     $('#sumbitECLSearch').click(function() {
         $.ajax({
-            url: 'terminology-server/MAIN/concepts/search',
+            url: terminologyServerUrl + '/' + branch + '/concepts/search',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
