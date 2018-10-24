@@ -1,5 +1,5 @@
 // Terminology Server on same nginx
-var terminologyServerUrl = 'terminology-server';
+var terminologyServerUrl = '/terminology-server';
 
 // Local Terminology Server without nginx
 //var terminologyServerUrl = 'http://localhost:8080/terminology-server';
